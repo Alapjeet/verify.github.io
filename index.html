@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Phone Authentication</title>
+  <title>NUMBER VERIFICATION</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap">
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom, #ffffff, #ffffff);
+      font-family: 'Jellee', Jellee;
+      background-color: #1F1147;
       color: #333;
       margin: 0;
       display: flex;
@@ -29,7 +29,7 @@
     }
 
     h2 {
-      color: #3f51b5;
+      color: ##1F1147;
       margin-bottom: 30px;
       font-weight: 600;
     }
@@ -85,7 +85,7 @@
     }
 
     button {
-      background-color: #3f51b5;
+      background-color: #1F1147;
       color: #ffffff;
       border: none;
       padding: 15px;
@@ -99,7 +99,7 @@
     }
 
     button:hover {
-      background-color: #303f9f;
+      background-color: ##1F1147;
     }
 
     #verification-container {
@@ -125,17 +125,17 @@
 </head>
 <body>
   <div class="container">
-    <h2>Phone Verification</h2>
+    <h2>NUMBER VERIFICATION</h2>
 
     <div id="phone-form">
-      <label for="phoneNumber">Enter your phone number:</label>
+      <label for="phoneNumber"></label>
       <div class="input-group">
         <select id="countryCode">
          <option value="+1">+1 (US)</option>
     <option value="+44">+44 (UK)</option>
-    <option value="+91">+91 (IN)</option>
+    <option value="+91" selected>+91 (IN)</option>
     <option value="+61">+61 (AU)</option>
-    <option value="+20" selected>+20 (EG)</option>
+    <option value="+20">+20 (EG)</option>
     <option value="+213">+213 (DZ)</option>
     <option value="+376">+376 (AD)</option>
     <option value="+244">+244 (AO)</option>
@@ -276,20 +276,20 @@
         </select>
       </div>
       <div class="input-group">
-        <input type="tel" id="phoneNumber" placeholder="1234567890" inputmode="numeric">
+        <input type="tel" id="phoneNumber" placeholder="Mobile Number" inputmode="numeric">
         <i class="material-icons">phone</i>
       </div>
       <div id="recaptcha-container"></div>
-      <button onclick="sendOTP()">Send OTP</button>
+      <button onclick="sendOTP()">SEND OTP</button>
     </div>
 
     <div id="verification-container">
-      <label for="otp">Enter OTP:</label>
+      <label for="otp"></label>
       <div class="input-group">
-        <input type="text" id="otp" placeholder="Enter 6-digit code" inputmode="numeric" maxlength="6">
+        <input type="text" id="otp" placeholder="Enter OTP" inputmode="numeric" maxlength="6">
         <i class="material-icons">lock</i>
       </div>
-      <button onclick="verifyOTP()">Verify OTP</button>
+      <button onclick="verifyOTP()">VERIFY OTP</button>
     </div>
 
     <p id="message"></p>
